@@ -8,9 +8,11 @@ arquivos = os.listdir(path)
 pastas = ['Documentos_e_Textos', 'Imagens', 'Áudio_e_Vídeo', 'Compactados', 'Outros']
 
 # Cria pastas
-for pasta in pastas:
-    os.mkdir(pasta)
-
+if os.path.exists(path + '\\Documentos_e_Textos') or os.path.exists(path + '\\Imagens') or os.path.exists(path + '\\Áudio_e_Vídeo') or os.path.exists(path + '\\Compactados') or os.path.exists(path + '\\Outros'):
+    pass
+else:
+    for pasta in pastas:
+        os.mkdir(pasta)
 # Organiza os arquivos na pasta downloads
 for arquivo in arquivos:
     if arquivo.endswith('.pdf') or arquivo.endswith('.docx') or arquivo.endswith('.txt') or arquivo.endswith('.xlsx'):
