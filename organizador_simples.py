@@ -23,5 +23,7 @@ for arquivo in arquivos:
         shutil.move(arquivo, path + '\\Áudio_e_Vídeo')
     elif arquivo.endswith('.zip') or arquivo.endswith('.rar'):
         shutil.move(arquivo, path + '\\Compactados')
+    elif arquivo == 'Documentos_e_Textos' or arquivo == 'Imagens' or arquivo == 'Áudio_e_Vídeo' or arquivo == 'Compactados':
+        pass
     else:
         shutil.move(arquivo, path + '\\Outros')
